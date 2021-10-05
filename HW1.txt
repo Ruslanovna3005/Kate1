@@ -1,0 +1,86 @@
+Ekateryna Ruslanovna 
+Group 23 
+
+1) Посмотреть где я - pwd
+
+2) Создать папку - mkdir folder
+
+3) Зайти в папку - cd folder
+
+4) Создать 3 папки - mkdir name1 name2 name3
+
+5) Зайти в любую папку - cd name2
+
+6) Создать 5 файлов (3 txt, 2 json) - touch 1.txt 2.txt 3.txt 1.json 2.json
+
+7) Создать 3 папки - mkdir kate1 kate2 kate3
+
+8) Вывести список содержимого папки - ls -la
+
+9) + Открыть любой txt файл - vim 1.txt
+
+10) + написать туда что-нибудь, любой текст. - i (enter) 
+23 group 
+169 students
+courses by Vadim Ksendzov 
+1234
+
+11) + сохранить и выйти. - (esc) :wq
+
+12) Выйти из папки на уровень выше - cd ..
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. - mv ../name1/{1.txt,2.txt} ../name2/
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. - cp ../name2/{1.txt,2.txt} ../name3/
+
+15) Найти файл по имени -  find . -name "1.txt"
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает. - cat 1.txt | grep 23 или tail -f 1.txt (ctrl+c)
+
+17) вывести несколько первых строк из текстового файла - head -3 1.txt
+
+18) вывести несколько последних строк из текстового файла - tail -3 1.txt
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает. less 1.txt
+
+20) вывести дату и время - date
+=========
+
+Задание *
+
+1) Отправить http запрос на сервер. 
+http://162.55.220.72:5005/terminal-hw-request - curl 'http://162.55.220.72:5005/get_method?name=EkaterynaRuslanovna&age=27'
+ 
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+1) mkdir auto
+2) cd auto
+3) touch scr.sh
+4) nano scr.sh
+
+	1)cd auto
+	2)mkdir name1 name2 name3
+	3)cd name2
+	4)touch 1.txt 2.txt 3.txt 1.json 2.json
+	5)mkdir kate1 kate2 kate3
+	6)ls -la
+	7)mv ../name2/{1.txt,2.txt} ../name1/
+
+	8)ctrl+x
+	9)enter
+
+5) ./scr.sh
+
+
+
+nano scr.sh
+
+#!/bin/bash
+
+cd folder
+mkdir 1 2 3
+cd 2
+touch 1.txt 2.txt 3.txt 1.json 2.json
+mkdir c b d
+ls -la
+mv ../2/{1.txt,2.txt} ../1/
