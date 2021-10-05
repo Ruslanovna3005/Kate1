@@ -68,6 +68,7 @@ vim new2.xml
  19. Отправить изменения на внешний репозиторий. - git push
 
  20. Отправить предыдущее домашнее задание по GitBush Terminal на внешний репозиторий. 
+ 
  git add HW1.txt
  git commit -m "Added HW1"
  git push
