@@ -1,0 +1,5 @@
+Film "1+1"
+Series "Ship"
+Food "Pasta"
+Season "summer"
+Country "Switzerland"
